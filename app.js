@@ -87,3 +87,30 @@ function mostCommonLetter(str) {
 
 mostCommonLetter('hello')
 //output string (character)
+
+//Factors
+let num = 72
+let factors = []
+
+console.log(`the factors of ${num} are: `)
+
+for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+        console.log(i)
+        factors.push(i)
+        console.log(factors)
+    }
+}
+
+
+
+function factorize(n) {
+    let factors = []
+    for (let i = 1; i <= Math.floor(n / 2); i++) {
+        if (n % i === 0) {
+            factors.push(i)
+        }
+    }
+    factors.push(n)
+    return factors
+}
