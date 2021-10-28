@@ -118,12 +118,15 @@ function factorize(n) {
 // Convert min to hour
 
 function timeConvert(min) {
-    if (min >= 60) {
-        let hours = Math.floor(min / 60)
-        let minutes = min % 60
-        console.log(hours, ":", minutes)
-    } else if (min < 60) {
-        let hours = 0
-        console.log(hours, ":", min)
-    }
+    // if (min >= 60) {
+    let hours = Math.floor(min / 60)
+    let minutes = min % 60
+    return hours + ':' + minutes
+    // } else if (min < 60) {
+    //     let hours = 0
+    //     console.log(hours, ":", min)
+    // }
+    // return Math.floor(min / 60) + ':' + min % 60
 }
+
+console.log(timeConvert(45))
