@@ -114,3 +114,16 @@ function factorize(n) {
     factors.push(n)
     return factors
 }
+
+// Convert min to hour
+
+function timeConvert(min) {
+    if (min >= 60) {
+        let hours = Math.floor(min / 60)
+        let minutes = min % 60
+        console.log(hours, ":", minutes)
+    } else if (min < 60) {
+        let hours = 0
+        console.log(hours, ":", min)
+    }
+}
