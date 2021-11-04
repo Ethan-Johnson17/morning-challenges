@@ -130,3 +130,38 @@ function timeConvert(min) {
 }
 
 console.log(timeConvert(45))
+
+
+//battle for middle earth
+// function battle(good, evil) {
+//     let goodScores = [1, 2, 3, 3, 4, 10]
+//     let evilScores = [1, 2, 2, 2, 3, 5, 10]
+//     let goodSoldiers = good.Split(' ').map(num => parseInt(num))
+//     let evilSoldiers = evil.Split(' ').map(num => parseInt(num))
+
+//     let goodTotal = 0
+//     for (let i = 0; i < goodSoldiers.length; i++) {
+//         let goodSoldier = goodSoldiers[i]
+//         let goodScore = goodScores[i]
+//         goodTotal = goodScore * goodSoldier
+//     }
+//     let evilTotal = 0
+//     for (let i = 0; i < evilSoldiers.length; i++) {
+//         let evilSoldier = evilSoldiers[i]
+//         let evilScore = evilScores[i]
+//         evilTotal = evilScore * evilSoldier
+//     }
+//     if (goodTotal === evilTotal)
+// }
+let a = 10
+let b = 2
+let c = 2
+function triangleCheck(a, b, c) {
+    if (a + b < c || a + c < b || b + c < a) {
+        return 'Not a triangle'
+    } else return 'Triangle successful built'
+}
+
+console.log(triangleCheck(1, 10, 2))
+
+console.log('Is it a triangle?', (a + b < c || a + c < b || b + c < a) ? 'No' : 'Yes')
