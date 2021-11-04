@@ -153,15 +153,31 @@ console.log(timeConvert(45))
 //     }
 //     if (goodTotal === evilTotal)
 // }
-let a = 10
-let b = 2
-let c = 2
-function triangleCheck(a, b, c) {
-    if (a + b < c || a + c < b || b + c < a) {
-        return 'Not a triangle'
-    } else return 'Triangle successful built'
+// let a = 10
+// let b = 2
+// let c = 2
+// function triangleCheck(a, b, c) {
+//     if (a + b < c || a + c < b || b + c < a) {
+//         return 'Not a triangle'
+//     } else return 'Triangle successful built'
+// }
+
+// console.log(triangleCheck(1, 10, 2))
+
+// console.log('Is it a triangle?', (a + b < c || a + c < b || b + c < a) ? 'No' : 'Yes')
+
+function isTriangle(...angles) {
+    if (angles.length > 3) return 'Not a triangle'
+    let sorted = angles.sort((a, b) => a - b)
+    console.log(sorted)
+    return sorted[2] < sorted[1] + sorted[0]
 }
 
-console.log(triangleCheck(1, 10, 2))
+console.log(isTriangle(10, 20, 31))
 
-console.log('Is it a triangle?', (a + b < c || a + c < b || b + c < a) ? 'No' : 'Yes')
+function isTriangle2(a, b, c) {
+    const large = Math.max(...arguments)
+    return large < (a + b + c) - large
+}
+
+console.log('Triangle', isTriangle2(29, 20, 10))
