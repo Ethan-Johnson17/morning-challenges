@@ -12,7 +12,7 @@ function findLongestWord(string) {
     return word
 }
 
-console.log(findLongestWord("This is the longest word in the entire aibohphobia , maybe even in the whole world."), longest)
+// console.log(findLongestWord("This is the longest word in the entire aibohphobia , maybe even in the whole world."), longest)
 
 // Establish the facts first, then write the function
 
@@ -57,7 +57,7 @@ function getMax(str) {
     return maxChar
 }
 
-console.log('The most common letter is', getMax('supercalifragilisticexpealadocious'))
+// console.log('The most common letter is', getMax('supercalifragilisticexpealadocious'))
 
 //input string
 function mostCommonLetter(str) {
@@ -92,13 +92,13 @@ mostCommonLetter('hello')
 let num = 72
 let factors = []
 
-console.log(`the factors of ${num} are: `)
+// console.log(`the factors of ${num} are: `)
 
 for (let i = 1; i <= num; i++) {
     if (num % i == 0) {
         console.log(i)
         factors.push(i)
-        console.log(factors)
+        // console.log(factors)
     }
 }
 
@@ -129,7 +129,7 @@ function timeConvert(min) {
     // return Math.floor(min / 60) + ':' + min % 60
 }
 
-console.log(timeConvert(45))
+// console.log(timeConvert(45))
 
 
 //battle for middle earth
@@ -173,11 +173,56 @@ function isTriangle(...angles) {
     return sorted[2] < sorted[1] + sorted[0]
 }
 
-console.log(isTriangle(10, 20, 31))
+// console.log(isTriangle(10, 20, 31))
 
 function isTriangle2(a, b, c) {
     const large = Math.max(...arguments)
     return large < (a + b + c) - large
 }
 
-console.log('Triangle', isTriangle2(29, 20, 10))
+// console.log('Triangle', isTriangle2(29, 20, 10))
+
+
+//codebreaker
+let data = `eedadn
+drvtee
+eandsr
+raavrd
+atevrs
+tsrnev
+sdttsa
+rasrtv
+nssdts
+ntnada
+svetve
+tesnvt
+vntsnd
+vrdear
+dvrsen
+enarar`.split('\n')
+
+//input string[]
+function repeaterCode(arr) {
+    let out = ''
+    for (let col = 0; col < arr[0].length; col++) {
+        //itterate over the first character in each string
+        const seen = {}
+        let greatest = ''
+        let greatestCount = 0
+        for (let row = 0; row < arr.length; row++) {
+            const char = arr[row][0]
+            //most common letter
+            seen[char] = seen[char] || 0
+            seen[char]++
+            if (seen[char] > greatestCount) {
+                greatestCount = seen[char]
+                greatest = char
+            }
+        }
+        out += greatest
+    }
+    return out
+}
+//output string
+
+
